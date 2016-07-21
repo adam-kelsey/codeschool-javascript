@@ -1,0 +1,90 @@
+Wanted to post question and answer, but I think it would be illegal since its a paid course. Just posting my attempts/answers.
+
+This is the codeschool course, I know it is starting off too basic but its a good review and will move into more difficult things.
+
+
+
+Javascript arrays
+
+1.
+list[3] = 4
+
+2.
+var list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+list.push(10)
+
+3.
+A-
+var values = ["string", 1, true];
+
+4.
+values.pop = var bool[]
+var bool = values.pop()
+
+5.
+var infant = eightiesMovies[1, 4]
+var infant = eightiesMovies[1][4]
+
+6.
+alert(eightiesMovies[0][0] + " " + eightiesMovies[0][1]);
+
+7.
+function numStrings(list) {
+  var count = 0
+  for (var i = 0; i < list.length; i++) {
+    if (typeof(list)[i] == "string" ) {
+      count++;
+    };
+  };
+  return count;
+};
+
+
+
+Function Expressions
+
+1.
+(showing the difference between anonymous functions and function declarations)
+var runAway = function () {
+  var toAlert = "";
+  for (var i = 0; i < 5; i++) {
+    toAlert = toAlert + "Lions, Tigers, and Bears, Oh My!!\n";
+  }
+  alert(toAlert); (anonymous function stored in a variable, with a semi colon)
+};
+
+2.
+storing the results of the function as a variable
+
+var people = 3;
+var rain = 4;
+var sharks = 5;
+
+var fearGenerated = function(numPeeps, rainInInches, numSharks) {
+  var rainFear = numPeeps * rainInInches;
+  var sharkFear = numSharks * numSharks * numSharks;
+  var totalFear = sharkFear + rainFear;
+  return totalFear;
+};
+var fear = fearGenerated(people, rain, sharks);
+
+3.
+(I guess this is just showing you can view the contents of your function without using it?)
+alert(fearGenerated);
+
+4.
+var fear = fearGenerated(numPeeps, rainInInches, numSharks);
+
+var fearMessage = function() {
+  if (fear < 200) {
+    return confirm("Fear Level: LOW\nStill wanna ride?");
+  } else if (fear >= 200 && fear <= 300) {
+    return confirm("Fear Level: MEDIUM\nThink you'll make it?");
+  } 
+};
+
+function confirmRide(confirmToGo) {
+  return confirmToGo();
+}
+
+var startRide = confirmRide(fearMessage);
