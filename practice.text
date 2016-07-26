@@ -88,3 +88,31 @@ function confirmRide(confirmToGo) {
 }
 
 var startRide = confirmRide(fearMessage);
+
+
+
+
+Function expressions with arrays!
+1.
+var passengers = [ ["Thomas", "Meeks"],
+                   ["Gregg", "Pollack"],
+                   ["Christine", "Wong"],
+                   ["Dan", "McGaw"] ];
+var modifiedNames = passengers.map(function(arrayCell) {
+  return arrayCell[0] + " " + arrayCell[1];
+});
+
+2.
+var modifiedNames = [ "Thomas Meeks",
+                      "Gregg Pollack",
+                      "Christine Wong",
+                      "Dan McGaw" ];
+modifiedNames.map (function (arrayCell) { alert("Yo, " + arrayCell + "!");});
+
+3.
+var puzzlers = [
+  function(a) { return 3 * a - 8; },
+  function(a) { return (a + 2) * (a + 2) * (a + 2); },
+  function(a) { return a*a - 9; },
+  function(a) { return a % 4; }
+  ];
