@@ -158,3 +158,39 @@ alert(applyAndEmpty(start, puzzlers));
 
 7.
 alert(puzzlers[puzzlers[1](3)](puzzlers[3](9)));
+
+
+
+
+
+Learning about javascript closures
+
+1.
+alert(54)
+alert(54); (semicolon gets me everytime!)
+
+2.
+alert(40);
+
+3.
+alert(122);
+
+4.
+function warningMaker(obstacle) {
+  return function() {
+    alert("Beware! There have been " + obstacle + " sightings in the cove today!");
+  };
+}
+
+5.
+function warningMaker(obstacle) {
+  return function() {
+    alert("Beware! There have been " + obstacle + " sightings in the Cove today!");
+  };
+}
+
+var icebergAlert = warningMaker("iceberg");
+
+>> icebergAlert();
+
+6.
