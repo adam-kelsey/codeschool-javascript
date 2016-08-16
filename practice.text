@@ -228,3 +228,79 @@ function theBridgeOfHoistingDoom() {
 
 
 3.
+function theBridgeOfHoistingDoom() {
+  var sword = undefined;
+  var dwarf = undefined;
+  var fall = undefined;
+  var ring = undefined;
+  function fellowship() {
+    return "friends";
+  }
+  sword = "sting";
+  dwarf = function() {
+    return "axe";
+  };
+  fall = "Fly you fools!";
+  fellowship = function() {
+    return "broken";
+  };
+  ring();
+  return sword;
+}
+
+4.
+function theBridgeOfHoistingDoom() {
+  var sword = undefined;
+  ...
+  ...
+  ...
+  function fellowship() ...
+  ...
+  ring();
+  return sword;
+}
+
+console.log("sting"); //not correct, ring(); gets hit first
+
+console.log("error"); // whoops, forgot caps!
+
+console.log("ERROR"); // ring is currently = undefined so ERROR is returned first
+
+
+
+
+Javascript objects!
+1.
+var vehicle1 = { type: "Motorboat", capacity: 6, storedAt: "Ammunition Depot" };
+var vehicle2 = { type: "Jet Ski", capacity: 1, storedAt: "Reef Dock" };
+var vehicle2 = { type: "Submarine", capacity: 8, storedAt: "Underwater Outpost" };  // whoops, vehicle 2 written twice!
+
+var vehicle1 = { type: "Motorboat", capacity: 6, storedAt: "Ammunition Depot" };
+var vehicle2 = { type: "Jet Ski", capacity: 1, storedAt: "Reef Dock" };
+var vehicle3 = { type: "Submarine", capacity: 8, storedAt: "Underwater Outpost" };
+
+
+2.
+Can access object values with the . method
+console.log(vehicle1.capacity);
+
+
+3.
+var vehicle1 = {type: "Motorboat", capacity: 6, storedAt: "Ammunition Depot"};
+var vehicle2 = {type: "Jet Ski", capacity: 1, storedAt: "Reef Dock"};
+var vehicle3 = {type: "Submarine", capacity: 8, storedAt: "Underwater Outpost"};
+
+var vehicles = [vehicle1, vehicle2, vehicle3];
+
+var findVehicle = function(name, list) {
+  for (var i = 0; i < list.length; i++) {
+    if (list[i].type == name) {
+      return list[i].storedAt;
+    }
+  }
+};
+
+findVehicle("Submarine", vehicles);
+
+
+4.
